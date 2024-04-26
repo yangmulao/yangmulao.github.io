@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>HTML position属性示例</title>
+   <style>
+      .static-div {
+         background-color: lightgreen;
+         padding: 20px;
+      }
+      .relative-div {
+         position: relative;
+         top: 30px;
+         left: 50px;
+         background-color: lightblue;
+         padding: 20px;
+      }
+      .absolute-div {
+         position: absolute;
+         top: 80px;
+         right: 30px;
+         background-color: lightpink;
+         padding: 20px;
+      }
+      .fixed-div {
+         position: fixed;
+         bottom: 30px;
+         left: 50%;
+         transform: translateX(-50%);
+         background-color: yellow;
+         padding: 20px;
+      }
+   </style>
+</head>
+<body>
+   <div class="static-div">
+      <h2>Static元素</h2>
+      <p>Static元素是position属性的默认值，它处于正常文档流中。</p>
+   </div>
+   <div class="relative-div">
+      <h2>Relative元素</h2>
+      <p>Relative元素相对于其自身原来的位置进行定位，不影响文档流中其他元素的位置。</p>
+   </div>
+   <div class="absolute-div">
+      <h2>Absolute元素</h2>
+      <p>Absolute元素脱离文档流，相对于最近的非static定位的祖先元素进行定位，会遮挡其它元素。</p>
+   </div>
+   <div class="fixed-div">
+      <h2>Fixed元素</h2>
+      <p>Fixed元素固定在浏览器窗口中的位置，不随页面滚动而移动，会遮挡其它元素。</p>
+   </div>
+</body>
+</html>

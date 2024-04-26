@@ -1,0 +1,99 @@
+---
+abbrlink: 0
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>弹窗示例</title>
+
+	<style>
+		.modal {display: none;position: fixed;z-index: 1;left: 0;top: 0;width: 100%;height: 100%;overflow: auto;background-color: rgba(0,0,0,0.4);}
+		.modal-content {background-color: #fefefe;margin: 10% auto;padding: 20px;border: 1px solid #888;width: 40%;}
+		.close {color: #aaa;float: right;font-size: 28px;font-weight: bold;}
+        .close:hover,
+        .close:focus {color: black;text-decoration: none;cursor: pointer;}
+
+	</style>
+</head>
+<body>
+
+	<h1>弹窗示例</h1>
+
+	<button onclick="openModal('modal1')">打开弹窗 1</button>
+	<button onclick="openModal('modal2')">打开弹窗 2</button>
+	<button onclick="openModal('modal3')">打开弹窗 3</button>
+	<button onclick="openModal('modal4')">打开弹窗 4</button>
+	<button onclick="openModal('modal5')">打开弹窗 5</button>
+	<button onclick="openModal('modal6')">打开弹窗 6</button>
+	<button onclick="openModal('modal7')">打开弹窗 7</button>
+
+	<!-- 弹窗 1 -->
+	<div id="modal1" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeModal('modal1')">&times;</span>
+			<p>这是弹窗 1 的内容。</p>
+		</div>
+	</div>
+
+	<!-- 弹窗 2 -->
+	<div id="modal2" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeModal('modal2')">&times;</span>
+			<p>这是弹窗 2 的内容。</p>
+		</div>
+	</div>
+
+	<!-- 弹窗 3 -->
+	<div id="modal3" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeModal('modal3')">&times;</span>
+			<p>这是弹窗 3 的内容。</p>
+		</div>
+	</div>
+
+	<!-- 弹窗 4 -->
+	<div id="modal4" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeModal('modal4')">&times;</span>
+			<p>这是弹窗 4 的内容。</p>
+		</div>
+	</div>
+
+	<!-- 弹窗 5 -->
+	<div id="modal5" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeModal('modal5')">&times;</span>
+			<p>这是弹窗 5 的内容。</p>
+		</div>
+	</div>
+
+	<!-- 弹窗 6 -->
+	<div id="modal6" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeModal('modal6')">&times;</span>
+			<p>这是弹窗 6 的内容。</p>
+		</div>
+	</div>
+
+	<!-- 弹窗 7 -->
+	<div id="modal7" class="modal">
+		<div class="modal-content">
+			<span class="close" onclick="closeModal('modal7')">&times;</span>
+			<p>这是弹窗 7 的内容。</p>
+		</div></div>
+
+	<script>
+		// 打开弹窗
+		function openModal(modalId) { var modal = document.getElementById(modalId); modal.style.display = "block"; }
+		// 关闭弹窗
+		function closeModal(modalId) { var modal = document.getElementById(modalId); modal.style.display = "none"; }
+		// 点击模态框外部区域也可以关闭弹窗
+		window.onclick = function(event) {
+			var modals = document.getElementsByClassName("modal");
+			for(var i = 0; i < modals.length; i++) {
+				if(event.target == modals[i]) { modals[i].style.display = "none"; } } }
+	</script>
+
+</body>
+</html>
